@@ -1,0 +1,85 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+body {
+    background: rgb(25, 51, 32);
+}
+.nav-pokedex {
+    background: #ca0000;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: larger;
+}
+.container-pokedex {
+    background: #005f57;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+/* Search Input */
+.container-pokedex input {
+    padding: 5px;
+    margin: 8px;
+    border-radius: 5px;
+    border-color: #ffc400;
+}
+/* Search Button */
+.container-pokedex button {
+    border-radius: 8px;
+    padding: 5px;
+    margin: 8px;
+    border-color: #ffc400;
+    background: #ffffff;
+}
+.container-pokedex button:hover {
+    background-color: #9e5f00;
+    color: #ffffff;
+}
+/* Pokemon Sprites */
+.pokedex-search-items {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    text-align: center;
+}
+.pokedex-search-items img{
+    width: 250px;
+    background: rgba(189, 225, 255, 0.8);
+}
+/* 2st Column */
+.pokedex-search-items .one {
+    background-color: rgba(189, 225, 255, 0.8);
+}
+/* Pokemon Name and Types */
+.pokedex-search-items h2{
+    padding: 5px;
+    margin-top: 4px;
+    background: rgba(189, 225, 255, 0.8);
+    border-radius: 20px;
+}
+.pokedex-search-items h4{
+    padding: 5px;
+    margin-top: 4px;
+    background: rgba(189, 225, 255, 0.8);
+    border-radius: 50px;
+}
+/* 2nd Column */
+.pokedex-search-items .two {
+    background-color: rgba(189, 225, 255, 0.8);
+    padding: 10px 20px 10px 20px;
+}
+/* Pokemon Statistics Text */
+.pokedex-search-items .two p,label{
+    padding-top: 8px;
+    margin: 0;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pokedex</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/stylesheet.css'>
+</head>
+
+<body>
+    <nav class="nav-pokedex">
+        <h1>Pokedex</h1>
+    </nav>
+    <div class="container-pokedex">
+        <input type="text" placeholder="Search your pokemon" id="pokeSearch" name="pokeSearch">
+        <button type="button" onclick="fetchPokemon()">Search</button>
+    </div>
+    <div class="pokedex-search-items">
+        <div class="one">
+            <img src="../static/pokeball.png" id="pokeSprite">
+            <h2 id="order"></h2>
+            <h2 id="pokemon"></h2>
+            <h4 id="type-01"></h4><h4 id="type-02"></h4>
+        </div>
+        <div class="two">
+            <h1>Pokemon Statistics:</h1>
+            <p>Abilities: <h4 id="ability"></h4></p>
+            <p>Base Statistics:</p>
+                <label>Hp<h4 id="hp"></h4></label> 
+                <label>Attack<h4 id="attack"></h4></label>
+                <label>Defense<h4 id="defense"></h4></label>
+                <label>Special-attack<h4 id="sa"></h4></label>
+                <label>Special-defense<h4 id="sd"></h4></label>
+                <label>Speed<h4 id="speed"></h4></label>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <script src='../js/main.js'></script>
+</footer>
+
+</html>
