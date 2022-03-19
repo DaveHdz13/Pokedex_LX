@@ -47,49 +47,30 @@ const fetchPokemon = () => {
             let type02 = document.getElementById("type-02");
             type02.innerHTML = " ";
         }
-        // Pokemon Ability Variable
+        // Pokemon Abilities
         let ability = data.abilities[0].ability.name;
-        // Pokemon Ability Print
-        let firstAbility = document.getElementById("ability");
-        firstAbility.innerHTML = ability;
+        let ability1 = data.abilities[1].ability.name;
+        pokeAbility(ability, ability1);
         // Pokemon Base Stats
         // Hp
         let baseH = data.stats[0].base_stat;
-        let hp = document.getElementById("hp");
-        hp.innerHTML = baseH
         // Attack
         let baseA = data.stats[1].base_stat;
-        let a = document.getElementById("attack");
-        a.innerHTML = baseA
         // Defense
         let baseD = data.stats[2].base_stat;
-        let d = document.getElementById("defense");
-        d.innerHTML = baseD
         // Special-Attack
         let baseSA = data.stats[3].base_stat;
-        let sa = document.getElementById("sa");
-        sa.innerHTML = baseSA
         // Special-Defense
         let baseSD = data.stats[4].base_stat;
-        let sd = document.getElementById("sd");
-        sd.innerHTML = baseSD
         // Speed
         let baseSp = data.stats[5].base_stat;
-        let sp = document.getElementById("speed");
-        sp.innerHTML = baseSp
+        baseStats(baseH, baseA, baseD, baseSA, baseSD, baseSp);
         // Pokemon Moves
         let moves = data.moves[0].move.name;
-        let pokeMoves = document.getElementById("moveOne");
-        pokeMoves.innerHTML = moves;
         let moves_01 = data.moves[1].move.name;
-        let pokeMoves_01 = document.getElementById("moveTwo");
-        pokeMoves_01.innerHTML = moves_01;
         let moves_02 = data.moves[2].move.name;
-        let pokeMoves_02 = document.getElementById("moveThree");
-        pokeMoves_02.innerHTML = moves_02;
         let moves_03 = data.moves[3].move.name;
-        let pokeMoves_03 = document.getElementById("moveFour");
-        pokeMoves_03.innerHTML = moves_03;
+        pokeMoves(moves, moves_01, moves_02, moves_03);
     })
 }
 
@@ -100,7 +81,39 @@ const pokeSprites = (url) => {
     const pokeSprite = document.getElementById("pokeSprite");
     pokeSprite.src = url;
 }
-
+// Pokemon Abilities
+const pokeAbility = (ability, ability1) => {
+    let firstAbility = document.getElementById("ability");
+    let secondAbility = document.getElementById("ability1");
+    firstAbility.innerHTML = ability;
+    secondAbility.innerHTML = ability1;
+}
+// Pokemon Moves
+const pokeMoves = (moves, moves_01, moves_02, moves_03) => {
+    let moveOne = document.getElementById("moveOne");
+    let moveTwo = document.getElementById("moveTwo");
+    let moveThree = document.getElementById("moveThree");
+    let moveFour = document.getElementById("moveFour");
+    moveOne.innerHTML = moves;
+    moveTwo.innerHTML = moves_01;
+    moveThree.innerHTML = moves_02;
+    moveFour.innerHTML = moves_03;
+}
+// Pokemon Basic Statistics
+const baseStats = (baseH, baseA, baseD, baseSA, baseSD, baseSp) => {
+    let hp = document.getElementById("hp");
+    let a = document.getElementById("attack");
+    let d = document.getElementById("defense");
+    let sa = document.getElementById("sa");
+    let sd = document.getElementById("sd");
+    let sp = document.getElementById("speed");
+    hp.innerHTML = baseH;
+    a.innerHTML = baseA;
+    d.innerHTML = baseD;
+    sa.innerHTML = baseSA;
+    sd.innerHTML = baseSD;
+    sp.innerHTML = baseSp;
+}
 
 
 //pokeSprites("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png");
