@@ -77,6 +77,19 @@ const fetchPokemon = () => {
         let baseSp = data.stats[5].base_stat;
         let sp = document.getElementById("speed");
         sp.innerHTML = baseSp
+        // Pokemon Moves
+        let moves = data.moves[0].move.name;
+        let pokeMoves = document.getElementById("moveOne");
+        pokeMoves.innerHTML = moves;
+        let moves_01 = data.moves[1].move.name;
+        let pokeMoves_01 = document.getElementById("moveTwo");
+        pokeMoves_01.innerHTML = moves_01;
+        let moves_02 = data.moves[2].move.name;
+        let pokeMoves_02 = document.getElementById("moveThree");
+        pokeMoves_02.innerHTML = moves_02;
+        let moves_03 = data.moves[3].move.name;
+        let pokeMoves_03 = document.getElementById("moveFour");
+        pokeMoves_03.innerHTML = moves_03;
     })
 }
 
